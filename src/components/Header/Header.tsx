@@ -1,4 +1,5 @@
 import { AppShell, Group, NavLink } from "@mantine/core";
+import { Link } from "react-router-dom";
 import { Logo } from "../../assets/icons/Logo";
 import { UserIcon } from "../../assets/icons/UserIcon";
 import "../../styles/reset.scss";
@@ -9,12 +10,13 @@ export function Header() {
     <AppShell header={{ height: 60 }}>
       <AppShell.Header className={styles.header}>
         <Group className={styles.headerContainer}>
-          <a href="#">
+          <Link to="/vacancies">
             <Logo className={styles.headerLogo} />
-          </a>
+          </Link>
           <Group className={styles.headerNavigation}>
             <NavLink
-              href="/link1"
+              component={Link}
+              to="/vacancies"
               label="Вакансии FE"
               className={`${styles.headerLink} ${styles.headerLinkActive}`}
             />

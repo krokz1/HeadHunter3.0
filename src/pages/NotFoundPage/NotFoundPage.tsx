@@ -1,8 +1,10 @@
 import { Container, Button, Group } from "@mantine/core";
+import { useNavigate } from "react-router-dom";
 import { Header } from "../../components/Header/Header";
 import styles from "./NotFoundPage.module.scss";
 
 export function NotFoundPage() {
+  const navigate = useNavigate();
   return (
     <>
       <Header />
@@ -18,7 +20,7 @@ export function NotFoundPage() {
                   Давайте перейдём к началу.
                 </p>
               </div>
-              <Button className={styles.vacanciesErrorButton}>
+              <Button className={styles.vacanciesErrorButton} onClick={() => navigate('/vacancies')}>
                 На главную
               </Button>
             </div>

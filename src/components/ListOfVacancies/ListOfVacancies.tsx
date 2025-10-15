@@ -1,6 +1,5 @@
 import {
   AppShell,
-  Group,
   ScrollArea,
   LoadingOverlay,
 } from "@mantine/core";
@@ -18,7 +17,6 @@ interface ListOfVacanciesProps {
 export function ListOfVacancies({
   vacancies,
   loading,
-  error,
 }: ListOfVacanciesProps) {
 
   return (
