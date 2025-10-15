@@ -1,0 +1,130 @@
+@use "../../assets/fonts/fonts.scss" as *;
+@use "../../styles/reset.scss" as *;
+@use "../../styles/variables.scss" as *;
+
+.notFoundContainer {
+  display: flex;
+  width: 100%;
+  height: 100dvh;
+  background-color: $background-color-accent;
+  padding-block-start: 72px;
+  justify-content: center;
+}
+
+.vacanciesError {
+  max-width: 707px;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  padding-inline: 2rem;
+  padding-block: 2rem;
+}
+
+.vacanciesErrorInfo {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vacanciesErrorTextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.vacanciesErrorTitle {
+  padding-inline-end: 5px;
+  font-family: "Open Sans Condensed";
+  font-weight: 700;
+  font-size: 2.125rem;
+  line-height: 130%;
+  color: #0f0f10;
+}
+
+.vacanciesErrorText {
+  font-family: "Open Sans Condensed";
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  color: #0f0f10;
+}
+
+.vacanciesErrorButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4263eb;
+  color: #ffffff;
+}
+
+.vacanciesErrorImg {
+  min-width: 640px;
+  min-height: 336px;
+}
+
+.textSection {
+  text-align: left;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #228be6;
+}
+
+.text {
+  font-size: 1.125rem;
+  margin-bottom: 30px;
+  color: #495057;
+  line-height: 1.6;
+}
+
+.button {
+  background: #228be6;
+
+  &:hover {
+    background: #1c7ed6;
+  }
+}
+
+.illustration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder {
+  display: flex;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: bold;
+  color: #adb5bd;
+}
+
+@media (max-width: 768px) {
+  .notFoundContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .textSection {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .placeholder {
+    width: 200px;
+    height: 200px;
+    font-size: 3rem;
+  }
+}
